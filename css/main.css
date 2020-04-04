@@ -1,4 +1,124 @@
+/* predefinições */
 * {
     box-sizing: border-box;
 }
 
+body {
+    background: rgba(156, 161, 170, 0.719);
+    margin: 0 auto;
+    /* width: 100%; */
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 2em;
+    color: #060a0b;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 0 10px 0;
+}
+
+/* Conteudo principal em CSS GRID */
+.container {
+    grid-template-areas: 'navbar  navbar navbar'
+        'aside  main main';
+    grid-template-columns: 30% 30% 40%;
+    height: 100%;
+    /* background-color: #f3f3f3; */
+    display: grid;
+    gap: 0;
+}
+
+.nav-bar {
+    background: rgb(42, 62, 68);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 50%;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* color: white; */
+}
+
+nav>ul>li>a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: black;
+}
+
+header {
+    grid-area: navbar;
+    /* background-color: rgb(117, 101, 77); */
+}
+
+aside {
+    grid-area: aside;
+    /* background: rgb(176, 176, 207); */
+}
+
+.main-content {
+    grid-area: main;
+    /* background: rgb(204, 173, 173); */
+    height: 100%;
+}
+
+.news-article {
+    /* background: white; */
+    padding: 5px;
+    margin: 3px 0 5px 0;
+    /* border-radius: 7px; */
+    display: flex;
+    width: calc(100% - 10px);
+    flex-direction: row;
+}
+
+.news-article-body {
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.news-article-body p {
+    font-size: 0.99em;
+}
+
+.news-article-body>h2 {
+    margin: 0 0 0 0;
+    color: #060a0b;
+}
+
+/* Cards */
+.news-article:nth-child(2n+1) {
+    background-color: rgb(42, 62, 68);
+    color: #060a0b;
+}
+
+.news-article:nth-child(2n+1) h2 {
+    color: white;
+}
+
+aside {
+    padding: 10px;
+    /* background-color: brown; */
+}
+
+aside div,
+aside picture {
+    padding: 10px;
+    max-width: 370px;
+}
+
+aside p {
+    text-align: justify;
+    font-size: 1.2em;
+}
